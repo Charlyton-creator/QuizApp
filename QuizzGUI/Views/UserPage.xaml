@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizzGUI.Views.UserPage"
+             xmlns:local="clr-namespace:QuizzGUI.ViewModels" 
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <Grid>
+            <Grid BackgroundColor="AliceBlue" Grid.Row="0" Margin="0, 0, 0, 60">
+                <StackLayout>
+                    <Frame BackgroundColor="#000" CornerRadius="10" Margin="20" WidthRequest="250" HeightRequest="250">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                                <forms:AnimationView x:Name="AnimationView"
+                                        Animation="quizMode.json"
+                                        AutoPlay="True"
+                                        VerticalOptions="StartAndExpand"
+                                        HorizontalOptions="StartAndExpand"
+                                        WidthRequest="140"
+                                        HeightRequest="250"
+                                        RepeatMode="Infinite"
+                                        AnimationSource="AssetOrBundle">
+                                </forms:AnimationView>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Spacing="4" Margin="0, 40, 0, 0">
+                                <Label Text="Jouer et Gagner des points!" FontAttributes="Bold" HorizontalOptions="End" FontSize="Title" TextColor="White"/>
+                                <Label Text="Votre jeu de quizz pour vous détendre" FontAttributes="Italic" FontSize="Subtitle" TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Nos Quizz: Choisissez pour continuer" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0, -60">
+                <Frame BackgroundColor="AliceBlue" CornerRadius="10" Margin="10" WidthRequest="300" HeightRequest="500">
+                    <StackLayout Spacing="5" HorizontalOptions="FillAndExpand" IsClippedToBounds="True" Orientation="Vertical">
+                        <ListView x:Name="CatList" VerticalScrollBarVisibility="Default" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Gray" ItemTapped="OnItemSelected">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame WidthRequest="300" CornerRadius="10">
+                                            <StackLayout Orientation="Vertical">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Frame WidthRequest="50" CornerRadius="50" HasShadow="True">
+                                                        <Image Source="{Binding IconSource, Mode=TwoWay}" WidthRequest="50"/>
+                                                    </Frame>
+                                                    <Label Text="Nombre de Quizz:" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                                    <Label Text="{Binding NombreQuizz, Mode=TwoWay}" FontAttributes="Italic" FontSize="Medium" TextColor="#2ea" HorizontalOptions="EndAndExpand"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="Quiz Catégorie:" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black"/>
+                                                    <Label Text="{Binding categorie, Mode=TwoWay}" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" FontSize="Small" TextColor="Red"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" Padding="10">
+                                                    <Frame WidthRequest="10" BackgroundColor="LightGreen" HorizontalOptions="EndAndExpand" CornerRadius="50">
+                                                        <Image Source="Play" WidthRequest="50"></Image>
+                                                    </Frame>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

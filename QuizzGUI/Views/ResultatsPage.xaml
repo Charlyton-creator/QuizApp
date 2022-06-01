@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:gradient="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="QuizzGUI.Views.ResultatsPage"
+             xmlns:local="clr-namespace:QuizzGUI.ViewModels" xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <gradient:PancakeView 
+                Grid.RowSpan="3"
+                BackgroundColor="#000E1A"/>
+            <Label
+                Grid.Row="0"
+                Margin="0, 10, 10, 0"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                Text="Quiz Results"
+                TextColor="White"/>
+
+
+            <StackLayout Orientation="Vertical" Spacing="5" x:DataType="local:ResultatsPageViewModel">
+                <forms:AnimationView x:Name="AnimationView"
+                                        Animation="{Binding resultats.Resultanimation, Mode=TwoWay}"
+                                        AutoPlay="True"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="CenterAndExpand"
+                                        WidthRequest="240"
+                                        HeightRequest="250"
+                                        RepeatMode="Infinite"
+                                        AnimationSource="AssetOrBundle">
+                </forms:AnimationView>
+                <StackLayout Orientation="Vertical" Spacing="5" Padding="30">
+                    <Label Text="{Binding resultats.ResultTitle, Mode=TwoWay}" TextTransform="Uppercase" FontSize="Subtitle" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                    <Label Text="{Binding resultats.ResultText, Mode=TwoWay}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Body" TextColor="Gainsboro"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Label Text="VOTRE SCORE" TextTransform="Uppercase" FontSize="Subtitle" TextColor="DimGray" HorizontalOptions="Center"/>
+                    <Label Text="{Binding resultats.Score, Mode=TwoWay}" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Header" TextColor="CornflowerBlue" TextTransform="Uppercase" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <button:SfButton
+                Grid.Row="2"
+                Margin="0, 10, 10, 24"
+                Text="Nouveau Quiz?"
+                Command="{Binding NewQuizCommand}"
+                HeightRequest="40"
+                TextColor="White"
+                CornerRadius="20"
+                FontSize="18"
+                HorizontalOptions="EndAndExpand"
+                BackgroundColor="CornflowerBlue"
+                WidthRequest="150"/>
+
+            <button:SfButton
+                Grid.Row="2"
+                Margin="0, 10, 10, 24"
+                BackgroundColor="LightSalmon"
+                Text="Share Results"
+                FontSize="18"
+                HeightRequest="40"
+                TextColor="White"
+                CornerRadius="20"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="150"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

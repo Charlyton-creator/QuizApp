@@ -1,0 +1,29 @@
+
+
+Date:2022-05-22 19:00:01,695
+Thread:[1]
+Level:ERROR
+Logger:Syncfusion.Xamarin.UI.MainViewModel                         [(null)]
+Message:Microsoft.VisualStudio.ProjectSystem.NameCollisionException: Un fichier nommé 'IValidationRule.cs' fait déjà partie du projet. Attribuez un nom unique à l'élément que vous ajoutez ou supprimez au préalable l'élément existant.
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.ProjectNode.RunWizard(SimpleHierarchyNode parentNode, String itemName, String wizardToRun, IntPtr dlgOwner)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.ProjectNode.<AddItemWithSpecificAsync>d__624.MoveNext()
+--- Fin de la trace de la pile à partir de l'emplacement précédent au niveau duquel l'exception a été levée ---
+   à System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   à System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProjectItems.<>c__DisplayClass1_0.<<AddFromTemplate>b__0>d.MoveNext()
+--- Fin de la trace de la pile à partir de l'emplacement précédent au niveau duquel l'exception a été levée ---
+   à System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   à System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProject.<>c__DisplayClass72_0`1.<<Mutate>b__0>d.MoveNext()
+--- Fin de la trace de la pile à partir de l'emplacement précédent au niveau duquel l'exception a été levée ---
+   à System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   à System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.ProjectNode.<>c__DisplayClass583_0.<<Mutate>b__0>d.MoveNext()
+--- Fin de la trace de la pile à partir de l'emplacement précédent au niveau duquel l'exception a été levée ---
+   à System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   à System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   à Microsoft.VisualStudio.Threading.JoinableTask.CompleteOnCurrentThread()
+   à Microsoft.VisualStudio.ProjectSystem.ProjectMultiThreadedService.ExecuteSynchronously(Func`1 asyncAction)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProject.Mutate[T](Func`1 asyncAction, Boolean includesFileSystemChange, String telemetryActivity)
+   à Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProjectItems.AddFromTemplate(String fileName, String name)
+   à Syncfusion.Xamarin.UI.MainWindow.AddItem_Click(Object sender, RoutedEventArgs e)

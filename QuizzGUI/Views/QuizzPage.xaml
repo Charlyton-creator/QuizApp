@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizzGUI.Views.QuizzPage"
+             xmlns:local="clr-namespace:QuizzGUI.Models" xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             BackgroundColor="#000E1A"
+             >
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" Padding="0">
+            <StackLayout Padding="5" Spacing="10">
+                <Label Text="{Binding categorie}" TextColor="LightGray" x:DataType="local:QuizzCat"></Label>
+                <carousel:SfCarousel x:Name="QuizzcarouselView" HeightRequest="500" SwipeEnded="SwipeEndEvent">
+                    <carousel:SfCarousel.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <StackLayout Orientation="Vertical" BackgroundColor="#000E1A" HeightRequest="600">
+                                <Label Text="{Binding Title}" FontSize="Title" TextColor="White" VerticalOptions="Start" HorizontalOptions="Start"></Label>
+                                    <StackLayout Orientation="Horizontal" x:Name="QuizInformations">
+                                            <Label Text="{Binding Question, Mode=TwoWay}" TextColor="White" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                                            <Label x:Name="CurrentQuiz" TextColor="White" FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                    <button:SfRadioGroup Orientation="Vertical" Padding="10" Margin="0, 30, 0, 0" Spacing="20" x:Name="Answers" CheckedChanged="CheckedChanged_eventAsync">
+                                        <button:SfRadioButton Text="{Binding Propositions[0], Mode=TwoWay}" x:Name="CheckAnswer0" UncheckedColor="#FF4A4A" HorizontalTextAlignment="Start" FontSize="Body" FontAttributes="Bold" TextColor="DimGray"/>
+                                        <button:SfRadioButton Text="{Binding Propositions[1], Mode=TwoWay}" x:Name="CheckAnswer1" UncheckedColor="#FF4A4A" HorizontalTextAlignment="Start" FontSize="Body" FontAttributes="Bold" TextColor="DimGray"/>
+                                        <button:SfRadioButton Text="{Binding Propositions[2], Mode=TwoWay}" x:Name="CheckAnswer2" UncheckedColor="#FF4A4A" HorizontalTextAlignment="Start" FontSize="Body" FontAttributes="Bold" TextColor="DimGray"/>
+                                        <button:SfRadioButton Text="{Binding Propositions[3], Mode=TwoWay}" x:Name="CheckAnswer3" UncheckedColor="#FF4A4A" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" FontSize="Body" FontAttributes="Bold" TextColor="DimGray" IsChecked="{Binding IsChecked}"/>
+                                    </button:SfRadioGroup>
+                            </StackLayout>
+                          </StackLayout>
+                        </DataTemplate>
+                    </carousel:SfCarousel.ItemTemplate>
+                </carousel:SfCarousel>
+                <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#000E1A" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <button:SfButton HasShadow="True" 
+                                     x:Name="Button"
+                                     Text="Send"                                   
+                                     HorizontalOptions="EndAndExpand" 
+                                     VerticalOptions="EndAndExpand" 
+                                     BackgroundColor="LightSkyBlue" 
+                                     CornerRadius="20" 
+                                     WidthRequest="150" 
+                                     TextColor="White" 
+                                     Margin="0, 30, 30, 0" 
+                                     Command="{Binding SendAnswerCommand}"
+                                     HeightRequest="50">
+                    </button:SfButton>
+                    <button:SfButton HasShadow="True" 
+                                     x:Name="But" 
+                                     IsEnabled="False"
+                                     Text="Terminer" 
+                                     HorizontalOptions="EndAndExpand" 
+                                     VerticalOptions="EndAndExpand" 
+                                     BackgroundColor="LightSalmon" 
+                                     CornerRadius="20"
+                                     WidthRequest="150" 
+                                     TextColor="White" 
+                                     Margin="0, 30, 30, 0" 
+                                     HeightRequest="50" 
+                                     Clicked="End">
+                    </button:SfButton>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

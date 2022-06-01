@@ -1,0 +1,49 @@
+[
+  {
+    "categorie": "Culture Generale",
+    "NombreQuizz": 10,
+    "IconSource": "quizIcon.png"
+  },
+
+  {
+    "categorie": "Mathematiques",
+    "NombreQuizz": 8,
+    "IconSource": "formulaFx.png"
+  },
+
+  {
+    "categorie": "Science de la vie",
+    "NombreQuizz": 6,
+    "IconSource": "massDensity.png"
+
+  },
+
+  {
+    "categorie": "Histoire",
+    "NombreQuizz": 7,
+    "IconSource": "castle.png"
+  },
+
+  {
+    "categorie": "Biologie",
+    "NombreQuizz": 9,
+    "IconSource": "massDensity.png"
+  },
+
+  {
+    "categorie": "Informatique",
+    "NombreQuizz": 10,
+    "IconSource": "quizIcon.png"
+  },
+
+  {
+    "categorie": "Sciences Physiques",
+    "NombreQuizz": 10,
+    "IconSource": "scienceAtom.png"
+  },
+  {
+    "categorie": "Reseau Informatique",
+    "NombreQuizz": 10,
+    "IconSource": "quizIcon.png"
+  }
+]

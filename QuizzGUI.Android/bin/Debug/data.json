@@ -1,0 +1,134 @@
+[
+  {
+    "Title":  "Question",
+    "Question": "Quelle est la capitale du Maroc ?",
+    "Catégorie": "Culture Generale",
+    "Propositions": [
+      "Fes",
+      "Casablanca",
+      "Rabat",
+      "Safi"
+    ],
+    "Answer": "Rabat"
+  },
+  {
+    "Title": "Question",
+    "Question": "Laquelle des fonctions suivantes prend une entrée console en Python ?",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "get()",
+      "input()",
+      "gets()",
+      "scan()"
+    ],
+    "Answer": "input()"
+  },
+  {
+    "Title": "Question",
+    "Question": "C'est la Science du Traitement automatique de l'information",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "TURBO C",
+      "Py Interpreter",
+      "Notepad",
+      "Informatique"
+    ],
+    "Answer": "Informatique"
+  },
+  {
+    "Title": "Question",
+    "Question": "La mosquée hassan 2 est situé dans ?",
+    "Catégorie": "Culture Generale",
+    "Propositions": [
+      "Fes",
+      "Agadir",
+      "Casablanca",
+      "Tanger"
+    ],
+    "Answer": "Fes"
+  },
+  {
+    "Title": "Question ",
+    "Question": "On ajoute un élement a une liste a?",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "custom local",
+      "fin",
+      "milieu",
+      "debut"
+    ],
+    "Answer": "fin"
+  },
+  {
+    "Title": "Question",
+    "Question": "Ce monsieur est celui qui a eu la première idée d'un ordinateur'",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "Ifrane",
+      "Williem Charles",
+      "Archile 1er",
+      "Charles Babbage"
+    ],
+    "Answer": "Williem Charles"
+  },
+  {
+    "Title": "Question",
+    "Question": "Lequel des éléments suivants est exécuté dans le navigateur (côté client) ?",
+    "Catégorie": "Reseau informatique",
+    "Propositions": [
+      "perl",
+      "css",
+      "python",
+      "java"
+    ],
+    "Answer": "css"
+  },
+  {
+    "Title": "Question",
+    "Question": "Co-fondateur de Apple. Il a revolutionner le monde mobile grace au Iphone",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "Bill Jobs",
+      "Steve Jobs",
+      "Jobs Gate",
+      "def"
+    ],
+    "Answer": "Bill Jobs"
+  },
+  {
+    "Title": "Question",
+    "Question": "Fondateur de Microsoft. Il a inventé le système d'exploitation le plus utilisé (Microsoft Windows)",
+    "Catégorie": "Informatique",
+    "Propositions": [
+      "Ophelie Winter",
+      "Charles Welliam",
+      "Steve Jobes",
+      "Bill Gates"
+    ],
+    "Answer": "Bill Gates"
+  },
+  {
+    "Title": "Question",
+    "Question": "Bandit Tirans avec les nazis qui a causé au monde un trouble durant les années 1900",
+    "Catégorie": "Histoire",
+    "Propositions": [
+      "Adolf Hiltler",
+      "Charles Welliam",
+      "Salomon",
+      "Bill Gates"
+    ],
+    "Answer": "Adolf Hitler"
+  },
+  {
+    "Title": "Question",
+    "Question": "Quelle est la bonne reponse a ce calcul: 10+4-2*0+5",
+    "Catégorie": "Mathematiques",
+    "Propositions": [
+      "60",
+      "7",
+      "9",
+      "8"
+    ],
+    "Answer": "9"
+  }
+]

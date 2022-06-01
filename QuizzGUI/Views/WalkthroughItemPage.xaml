@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:QuizzGUI.Controls"
+             x:Class="QuizzGUI.Views.WalkthroughItemPage">
+  <ContentView.Content>
+      <StackLayout>
+            <controls:SVGImage Source ="{Binding ImagePath}"
+                               Margin="0, 30, 0, 0"
+                               WidthRequest="300"
+                               HeightRequest="300"
+                               Opacity="0"
+                               VerticalOptions="Center">
+            </controls:SVGImage>
+          <Label 
+              FontSize="30"
+              TextColor="White"
+              Opacity="0"
+              TranslationY="60"
+              Text="{Binding Header}"  
+              Margin="0,30, 0, 8"/>
+            <Label 
+                FontSize="20"
+                TextColor="White"
+                Opacity="0"
+                TranslationY="60"
+                Text="{Binding Content}" 
+                   />
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>
